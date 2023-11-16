@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="rentx.View.User.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>RentX</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <link rel="stylesheet" href="../../Assets/Libraries/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../assets/icon/themify-icons/themify-icons.css">
+
+    <link rel="stylesheet" type="text/css" href="../assets/icon/icofont/css/icofont.css">
+ 
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
+ 
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/icon-font.min.css">
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="../UserFiles/css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="../UserFiles/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="../UserFiles/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="../UserFiles/css/responsive.css" rel="stylesheet" />
+
+    <script src="../UserFiles/js/jquery-3.4.1.min.js"></script>
+    <script src="../UserFiles/js/custom.js"></script>
+
+    <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>
+
+</head>
+<body>
+<form id="form1" runat="server">
+     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <div>
+                            <a href="Home.aspx">
+                                <img  src="../../Assets/Img/logo.png" width="500" height="100"  />
+                            </a>
+                       
+                        </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" style="color:black" aria-current="page" href="Home.aspx">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color:black"  href="ReservationNow.aspx">Reservation Now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color:black" href="Cars.aspx">Cars</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" style="color:black" href="Contact.aspx">Contact</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" style="color:black" href="About.aspx">About</a>
+        </li>
+       
+      </ul>
+         <asp:LinkButton ID="bttnProfile"   Text="Profile" runat="server" OnClick="Profile_Click" CausesValidation="false" Visible="false"></asp:LinkButton>
+ 
+       <asp:LinkButton ID="Sign" runat="server"  OnClick="lbLoginOrLogout_Click"
+                                    CausesValidation="false">
+                                </asp:LinkButton>
+    
+</nav>
+   
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                
+       
+            </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

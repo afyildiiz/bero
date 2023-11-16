@@ -1,0 +1,413 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D828720-D1DD-4AAC-B883-DDCBDBDB21E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rentx</RootNamespace>
+    <AssemblyName>rentx</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44319</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assets\CSS\animate.css\css\animate.css" />
+    <Content Include="Assets\CSS\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\CSS\jquery.mCustomScrollbar.css" />
+    <Content Include="Assets\CSS\morris.js\css\morris.css" />
+    <Content Include="Assets\CSS\style.css" />
+    <Content Include="Assets\datatables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Assets\datatables\css\icon-font.min.css" />
+    <Content Include="Assets\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="Assets\datatables\css\responsive.bootstrap4.min.css" />
+    <Content Include="Assets\datatables\css\responsive.dataTables.min.css" />
+    <Content Include="Assets\datatables\images\sort_asc.png" />
+    <Content Include="Assets\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Assets\datatables\images\sort_both.png" />
+    <Content Include="Assets\datatables\images\sort_desc.png" />
+    <Content Include="Assets\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Assets\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="Assets\datatables\js\buttons.flash.min.js" />
+    <Content Include="Assets\datatables\js\buttons.html5.min.js" />
+    <Content Include="Assets\datatables\js\buttons.print.min.js" />
+    <Content Include="Assets\datatables\js\datatable-setting.js" />
+    <Content Include="Assets\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Assets\datatables\js\dataTables.buttons.min.js" />
+    <Content Include="Assets\datatables\js\dataTables.responsive.min.js" />
+    <Content Include="Assets\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="Assets\datatables\js\jszip.min.js" />
+    <Content Include="Assets\datatables\js\pdfmake.min.js" />
+    <Content Include="Assets\datatables\js\responsive.bootstrap4.min.js" />
+    <Content Include="Assets\datatables\js\vfs_fonts.js" />
+    <Content Include="Assets\Img\07bfb637-5f05-430c-b86f-049bf3814a92.jpeg" />
+    <Content Include="Assets\Img\0b688d18-756d-4ab5-a51b-385818c738f3.jpg" />
+    <Content Include="Assets\Img\addcar.png" />
+    <Content Include="Assets\Img\d602bd25-897a-40e6-9e35-2e7fc904ee0c.jpg" />
+    <Content Include="Assets\Img\d9f1a8e6-bb14-442c-b4bd-bab2bb2e90ee.jpg" />
+    <Content Include="Assets\Img\fc019f9c-2404-43b1-9648-b8169c5203b3.jpg" />
+    <Content Include="Assets\Img\logo.png" />
+    <Content Include="Assets\Img\no-image.png" />
+    <Content Include="Assets\js\bootstrap-growl.min.js" />
+    <Content Include="Assets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\js\classie.js" />
+    <Content Include="Assets\js\classie\classie.js" />
+    <Content Include="Assets\js\common-pages.js" />
+    <Content Include="Assets\js\demo-12.js" />
+    <Content Include="Assets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Assets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Assets\js\jquery.mousewheel.min.js" />
+    <Content Include="Assets\js\jquery\jquery.min.js" />
+    <Content Include="Assets\js\modernizr\css-scrollbars.js" />
+    <Content Include="Assets\js\modernizr\modernizr.js" />
+    <Content Include="Assets\js\morris.js\morris.js" />
+    <Content Include="Assets\js\pcoded.min.js" />
+    <Content Include="Assets\js\popper.js\popper.min.js" />
+    <Content Include="Assets\js\raphael\raphael.min.js" />
+    <Content Include="Assets\js\script.js" />
+    <Content Include="Assets\js\script.min.js" />
+    <Content Include="Assets\js\SmoothScroll.js" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.css" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\Libraries\css\bootstrap.css" />
+    <Content Include="Assets\Libraries\css\bootstrap.min.css" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.js" />
+    <Content Include="Assets\Libraries\js\bootstrap.min.js" />
+    <Content Include="Assets\pages\accordion\accordion.js" />
+    <Content Include="Assets\pages\accordion\accordion.min.js" />
+    <Content Include="Assets\pages\chart\morris\morris-custom-chart.js" />
+    <Content Include="Assets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="Assets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="Assets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="Assets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="Assets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="Assets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="Assets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="Assets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="Assets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="Assets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="Assets\pages\google-maps\gmaps.min.js" />
+    <Content Include="Assets\pages\google-maps\jquery.gmaps.js" />
+    <Content Include="Assets\pages\icon-modal.js" />
+    <Content Include="Assets\pages\notification\notification.css" />
+    <Content Include="Assets\pages\notification\notification.js" />
+    <Content Include="Assets\pages\todo\todo.js" />
+    <Content Include="Assets\pages\widget\amchart\amcharts.js" />
+    <Content Include="Assets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="Assets\pages\widget\amchart\ammap.js" />
+    <Content Include="Assets\pages\widget\amchart\ammap.min.js" />
+    <Content Include="Assets\pages\widget\amchart\continentsLow.js" />
+    <Content Include="Assets\pages\widget\amchart\continentsLow.min.js" />
+    <Content Include="Assets\pages\widget\amchart\gauge.js" />
+    <Content Include="Assets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="Assets\pages\widget\amchart\light.js" />
+    <Content Include="Assets\pages\widget\amchart\light.min.js" />
+    <Content Include="Assets\pages\widget\amchart\pie.js" />
+    <Content Include="Assets\pages\widget\amchart\pie.min.js" />
+    <Content Include="Assets\pages\widget\amchart\serial.js" />
+    <Content Include="Assets\pages\widget\amchart\serial.min.js" />
+    <Content Include="Assets\pages\widget\amchart\worldLow.js" />
+    <Content Include="Assets\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="UserFiles\css\bootstrap.css" />
+    <Content Include="UserFiles\css\font-awesome.min.css" />
+    <Content Include="UserFiles\css\responsive.css" />
+    <Content Include="UserFiles\css\style.css" />
+    <Content Include="UserFiles\css\style.css.txt" />
+    <Content Include="UserFiles\images\about-img.png" />
+    <Content Include="UserFiles\images\about-img2.png" />
+    <Content Include="UserFiles\images\f1.png" />
+    <Content Include="UserFiles\images\f2.png" />
+    <Content Include="UserFiles\images\f3.png" />
+    <Content Include="UserFiles\images\f4.png" />
+    <Content Include="UserFiles\images\f5.png" />
+    <Content Include="UserFiles\images\f6.png" />
+    <Content Include="UserFiles\images\f7.png" />
+    <Content Include="UserFiles\images\f8.png" />
+    <Content Include="UserFiles\images\f9.png" />
+    <Content Include="UserFiles\images\favicon.png" />
+    <Content Include="UserFiles\images\hero-bg.jpg" />
+    <Content Include="UserFiles\images\o1.jpg" />
+    <Content Include="UserFiles\images\o2.jpg" />
+    <Content Include="UserFiles\images\pasta.png" />
+    <Content Include="UserFiles\images\pizzaMenu.png" />
+    <Content Include="UserFiles\js\bootstrap.js" />
+    <Content Include="UserFiles\js\custom.js" />
+    <Content Include="UserFiles\js\jquery-3.4.1.min.js" />
+    <Content Include="View\Admin\AccountSettings.aspx" />
+    <Content Include="View\Admin\Cars.aspx" />
+    <Content Include="View\Admin\Dashboard.aspx" />
+    <Content Include="View\Admin\Reports.aspx" />
+    <Content Include="View\Admin\Reservations.aspx" />
+    <Content Include="View\Admin\Users.aspx" />
+    <Content Include="View\User\About.aspx" />
+    <Content Include="View\User\Cars.aspx" />
+    <Content Include="View\User\Contact.aspx" />
+    <Content Include="View\User\Home.aspx" />
+    <Content Include="View\User\Login.aspx" />
+    <Content Include="View\User\Profile.aspx" />
+    <Content Include="View\User\ReservationNow.aspx" />
+    <Content Include="View\User\Signup.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connect.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Admin\AccountSettings.aspx.cs">
+      <DependentUpon>AccountSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\AccountSettings.aspx.designer.cs">
+      <DependentUpon>AccountSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Reservations.aspx.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Reservations.aspx.designer.cs">
+      <DependentUpon>Reservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Cars.aspx.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Cars.aspx.designer.cs">
+      <DependentUpon>Cars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\ReservationNow.aspx.cs">
+      <DependentUpon>ReservationNow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\ReservationNow.aspx.designer.cs">
+      <DependentUpon>ReservationNow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\datatables\fonts\ionicons.ttf" />
+    <Content Include="Assets\datatables\fonts\ionicons.woff" />
+    <Content Include="Assets\datatables\fonts\themify.ttf" />
+    <Content Include="Assets\datatables\fonts\themify.woff" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap.css.map" />
+    <Content Include="Assets\Libraries\css\bootstrap.min.css.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.js.map" />
+    <Content Include="Assets\Libraries\js\bootstrap.min.js.map" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\rentx.csproj.AssemblyReference.cache" />
+    <None Include="packages.config" />
+    <Content Include="View\Admin\Admin.Master" />
+    <Content Include="View\User\User.Master" />
+    <Content Include="UserFiles\css\style.css.map" />
+    <Content Include="UserFiles\css\style.scss" />
+    <Content Include="UserFiles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="UserFiles\fonts\fontawesome-webfont.woff" />
+    <Content Include="UserFiles\fonts\fontawesome-webfont.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55566</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
